@@ -9,8 +9,8 @@ export const Home = () => {
         <>
             <section className="home-logo">
                 <div className="header-content">
-                    <h2>TOPS & BOTTOMS</h2>
-                    <h1>NEW <strong>ARRIVALS</strong></h1>
+                    <h1>TOPS & BOTTOMS</h1>
+                    <h2>NEW <strong>ARRIVALS</strong></h2>
                     <button className='home-shop'>
                         SHOP
                     </button>

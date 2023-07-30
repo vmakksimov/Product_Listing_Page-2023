@@ -11,7 +11,7 @@ export const Header = () => {
             </div>
             <ul className="header-elements">
                 <li className='header-buttons'><Link to='/'>Home</Link></li>
-                <li className='header-buttons'><Link to=''>Tops</Link></li>
+                <li className='header-buttons'><Link to='/tops'>Tops</Link></li>
                 <li className='header-buttons'><Link to=''>Bottoms</Link></li>
             </ul>
         </div>

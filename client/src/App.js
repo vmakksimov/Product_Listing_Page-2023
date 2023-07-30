@@ -5,7 +5,9 @@ import products from './local-json/products.json'
 import { useState, useEffect } from 'react'
 import { Header } from "./components/Header/Header";
 import { Home } from "./components/Home/Home";
-import { Routes, Route} from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import { Footer } from './components/Footer/Footer';
+import { Tops } from './components/Shop/Tops/Tops';
 
 
 function App() {
@@ -34,17 +36,18 @@ function App() {
             <section className="home-section">
 
                 <Routes>
-                <Route path='/' element={<Home />} />
-                {products && products.map(res => (
-                    // <div key={_id} className='row'>
-                    //     <strong>{title}</strong>
-                    // </div>
-                    console.log(res)
-                ))}
+                    <Route path='/' element={<Home />} />
+                    <Route path='/tops' element={<Tops />} />
+                    {products && products.map(res => (
+                        // <div key={_id} className='row'>
+                        //     <strong>{title}</strong>
+                        // </div>
+                        console.log(res)
+                    ))}
                 </Routes>
             </section>
 
-
+            <Footer />
         </div>
     );
 }
