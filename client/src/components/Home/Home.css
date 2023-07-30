@@ -1,0 +1,54 @@
+.header-content {
+    margin: 150px auto;
+}
+
+.home-shop {
+    border: 0px;
+    background: #717fdf;
+    border-radius: 25px;
+    padding: 8px 68px;
+    color: white;
+}
+
+.img-logo {
+    margin: 150px auto;
+}
+
+.home-logo {
+    background: #e9eae38f;
+}
+
+.home-types {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.type-men,
+.type-women {
+    display: flex;
+    border: 1px solid gainsboro;
+    width: 24%
+}
+
+.type-image {
+    width: 39%;
+}
+
+.type-image-men img {
+    width: 81.6%;
+}
+
+.type-image-women img {
+    width: 100%;
+}
+
+.type-men:hover,
+.type-women:hover {
+    background-color: #717fdf;
+    cursor: pointer;
+    color: white;
+}
+
+
+
