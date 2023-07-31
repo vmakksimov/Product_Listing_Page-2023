@@ -37,7 +37,7 @@ function App() {
 
                 <Routes>
                     <Route path='/' element={<Home />} />
-                    <Route path='/tops' element={<Tops />} />
+                    <Route path='/tops' element={<Tops products={products}/>} />
                     {products && products.map(res => (
                         // <div key={_id} className='row'>
                         //     <strong>{title}</strong>

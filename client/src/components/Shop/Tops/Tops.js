@@ -1,4 +1,5 @@
 import './Tops.css'
+import { TopsDetails } from './TopsDetails/TopsDetails'
 import top1 from '../../../styles/images/top1.webp'
 import top2 from '../../../styles/images/top2.jpg'
 import top3 from '../../../styles/images/top3.jpg'
@@ -13,7 +14,9 @@ import top12 from '../../../styles/images/top12.jpg'
 import top13 from '../../../styles/images/top13.jpg'
 
 
-export const Tops = () => {
+export const Tops = ({products}) => {
+
+
     return (
         <section class="tops-content">
             <div class="div1">Filter</div>
@@ -21,10 +24,10 @@ export const Tops = () => {
             <div class="div3">Category Name & Description </div>
             <div class="div4">Sort</div>
             <div class="div5">
-                <section className="items-row-1">
+                {/* <section className="items-row-1">
                     <article className="product-item">
                         <div className="product-image">
-                            <img src={top1} alt="" />
+                            <img src={tops.image} alt="" />
                         </div>
                         <div className="product-info">
                             <p>Black top </p>
@@ -188,8 +191,11 @@ export const Tops = () => {
                         <div className="product-image"></div>
                         <div className="product-info"></div>
                     </article>
-                </section>
-
+                </section> */}
+                {products.length > 0
+                    ? products.map(x => <TopsDetails key={x._id} tops={x} />)
+                    : <span>This user has no tops yet.</span>
+                }
             </div>
             <div class="div6">Load More </div>
         </section>

@@ -3,6 +3,8 @@ import women_model_logo from '../../styles/images/womenmodel.png'
 
 import men_model from '../../styles/images/menmodel.png'
 
+
+
 import './Home.css'
 export const Home = () => {
     return (
