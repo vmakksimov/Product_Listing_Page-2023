@@ -5,9 +5,10 @@
         "liked": "false",
         "added_to_cart": "false",
         "gender": "male",
-        "description": "Material: Fabric; Composition: 95% Polyester 5% Elastane; Color: Black",
+        "description": "Material: Fabric; Composition: 95% Polyester 5% Elastane;",
         "name": "Men Cartoon Graphic Tee",
         "price": "25.99$",
+        "color": "Black",
         "image": "images/top1.jpg"
     },
     {
@@ -15,9 +16,10 @@
         "liked": "false",
         "added_to_cart": "false",
         "gender": "male",
-        "description": "Material: Fabric; Composition: 100% Polyester; Color: White",
+        "description": "Material: Fabric; Composition: 100% Polyester;",
         "name": "Manfinity Hypemode Men Plus Panda Print Tee",
         "price": "21$",
+        "color": "White",
         "image": "images/top2.jpg"
     },
     {
@@ -25,9 +27,10 @@
         "liked": "false",
         "added_to_cart": "false",
         "gender": "male",
-        "description": "Material: Fabric; Composition: 100% Polyeste; Color: Brown",
+        "description": "Material: Fabric; Composition: 100% Polyeste;",
         "name": "Manfinity Hypemode Men Cartoon Face Print Tee",
         "price": "30$",
+        "color": "Brown",
         "image": "images/top3.jpg"
     },
     {
@@ -35,9 +38,10 @@
         "liked": "false",
         "added_to_cart": "false",
         "gender": "male",
-        "description": "Material: Knitted Fabric; Composition: 100% Polyester; Color: Apricot",
+        "description": "Material: Knitted Fabric; Composition: 100% Polyester;",
         "name": "Manfinity Homme Men Cartoon Graphic Tee",
         "price": "10$",
+        "color": "Apricot",
         "image": "images/top4.jpg"
     },
     {
@@ -45,9 +49,10 @@
         "liked": "false",
         "added_to_cart": "false",
         "gender": "male",
-        "description": "Material: Fabric; Composition: 100% Polyester; Color: Black",
+        "description": "Material: Fabric; Composition: 100% Polyester;",
         "name": "Men Letter Graphic Drop Shoulder Tee",
         "price": "22.99$",
+        "color": "Black",
         "image": "images/top5.jpg"
     },
     {
@@ -55,9 +60,10 @@
         "liked": "false",
         "added_to_cart": "false",
         "gender": "male",
-        "description": "Material: Fabric; Composition: 95% Polyester 5% Elastane; Color: Khaki",
+        "description": "Material: Fabric; Composition: 95% Polyester 5% Elastane;",
         "name": "Manfinity RSRT Men Plus Coconut Tree Print Tee",
         "price": "10$",
+        "color": "Khaki",
         "image": "images/top6.jpg"
     },
     {
@@ -65,9 +71,10 @@
         "liked": "false",
         "added_to_cart": "false",
         "gender": "male",
-        "description": "Material: Fabric; Composition: 100% Polyester; Color: Khaki",
+        "description": "Material: Fabric; Composition: 100% Polyester;",
         "name": "Manfinity Rose Print Tee",
         "price": "15$",
+        "color": "Khaki",
         "image": "images/top7.jpg"
     },
     {
@@ -75,9 +82,10 @@
         "liked": "false",
         "added_to_cart": "false",
         "gender": "male",
-        "description": "Material: Fabric; Composition: 62% Polyester, 34% Cotton, 4% Elastane; Color: Brown",
+        "description": "Material: Fabric; Composition: 62% Polyester, 34% Cotton, 4% Elastane;",
         "name": "Manfinity Hypemode Men Cotton Reflective Halloween Print",
         "price": "34.99$",
+        "color": "Black",
         "image": "images/top8.jpg"
     },
     {
@@ -85,9 +93,10 @@
         "liked": "false",
         "added_to_cart": "false",
         "gender": "female",
-        "description": "Material: Fabric; Composition: 95% Polyester 5% Elastane; Color: Light Grey",
+        "description": "Material: Fabric; Composition: 95% Polyester 5% Elastane;",
         "name": "Solid form fitted Tee",
         "price": "26.99$",
+        "color": "Light Grey",
         "image": "images/top10.jpg"
     },
     {
@@ -95,9 +104,10 @@
         "liked": "false",
         "added_to_cart": "false",
         "gender": "female",
-        "description": "Material: Fabric; Composition: 97% Polyester, 3% Elastane; Color: Black",
+        "description": "Material: Fabric; Composition: 97% Polyester, 3% Elastane;",
         "name": "EZwear Solid Drop Shoulder Tee",
         "price": "21$",
+        "color": "Black",
         "image": "images/top11.jpg"
     },
     {
@@ -105,9 +115,10 @@
         "liked": "false",
         "added_to_cart": "false",
         "gender": "female",
-        "description": "Material: Fabric; Composition: 95% Polyester, 5% Elastane; Color: Black",
+        "description": "Material: Fabric; Composition: 95% Polyester, 5% Elastane;",
         "name": "EZwear Solid Crop Tank Top",
         "price": "32.99$",
+        "color": "Black",
         "image": "images/top12.jpg"
     },
     {
@@ -115,9 +126,10 @@
         "liked": "false",
         "added_to_cart": "false",
         "gender": "female",
-        "description": "Material: Medium Stretch; Composition: 100% Polyester; Color: Black",
+        "description": "Material: Medium Stretch; Composition: 100% Polyester;",
         "name": "Solid Mock Neck Crop Top",
         "price": "17$",
+        "color": "Black",
         "image": "images/top13.jpg"
     },
     {
@@ -125,9 +137,9 @@
         "liked": "false",
         "added_to_cart": "false",
         "gender": "female",
-        "description": "Material: Fabric; Composition: 92% Polyester, 8% Elastane; Color: Dark Grey",
+        "description": "Material: Fabric; Composition: 92% Polyester, 8% Elastane;",
         "name": "EZwear Drop Shoulder Letter Embroidery Top",
-        "price": "20.99$",
+        "color": "Dark Grey",
         "image": "images/top14.jpg"
     },
     {
@@ -135,9 +147,9 @@
         "liked": "false",
         "added_to_cart": "false",
         "gender": "female",
-        "description": "Material: Fabric; Composition: 95% Polyester, 5% Elastane; Color: Black",
+        "description": "Material: Fabric; Composition: 95% Polyester, 5% Elastane;",
         "name": "EZwear Solid Drop Shoulder Tee",
-        "price": "37$",
+        "color": "Black",
         "image": "images/top15.jpg"
     },
     {
@@ -148,6 +160,7 @@
         "description": "Material: Fabric; Composition: 95% Polyester, 5% Elastane; Color: Black",
         "name": "Privé Rib-knit Solid Crop Tank Top",
         "price": "15$",
+        "color": "Black",
         "image": "images/top16.jpg"
     },
     {
@@ -155,9 +168,10 @@
         "liked": "false",
         "added_to_cart": "false",
         "gender": "female",
-        "description": "Material: Slight Stretch; Composition: 100% Polyester; Color: White",
+        "description": "Material: Slight Stretch; Composition: 100% Polyester",
         "name": "Solid Form Fitted Crop Cami Top",
         "price": "14.99$",
+        "color": "White",
         "image": "images/top17.jpg"
     }
 
