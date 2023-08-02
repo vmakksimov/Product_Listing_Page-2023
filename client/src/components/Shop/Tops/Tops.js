@@ -1,25 +1,44 @@
 import './Tops.css'
+import { useState } from 'react'
 import { TopsDetails } from './TopsDetails/TopsDetails'
-import top1 from '../../../styles/images/top1.webp'
-import top2 from '../../../styles/images/top2.jpg'
-import top3 from '../../../styles/images/top3.jpg'
-import top4 from '../../../styles/images/top4.jpg'
-import top5 from '../../../styles/images/top5.jpg'
-import top6 from '../../../styles/images/top6.jpg'
-import top7 from '../../../styles/images/top7.jpg'
-import top8 from '../../../styles/images/top8.jpg'
-import top10 from '../../../styles/images/top10.jpg'
-import top11 from '../../../styles/images/top11.jpg'
-import top12 from '../../../styles/images/top12.jpg'
-import top13 from '../../../styles/images/top13.jpg'
+import { Checkbox } from '../Sections'
 
+export const Tops = ({ products }) => {
 
-export const Tops = ({products}) => {
+    const [checked, setChecked] = useState([]);
+    const gender = ['male', 'female']
+
+    const males = products.filter(x => x.gender == 'male')
+    const females = products.filter(x => x.gender == 'female')
+
+    const checkHandler = (e) => {
+        let updatedList = [...checked];
+
+        if (e.target.checked) {
+            updatedList = [...checked, e.target.value];
+        } else {
+            updatedList.splice(checked.indexOf(e.target.value), 1);
+        }
+
+        setChecked(updatedList);
+    }
 
 
     return (
         <section class="tops-content">
-            <div class="div1">Filter</div>
+            <div class="div1">
+                <div className="checkList">
+                    <div className="title">Your CheckList:</div>
+                    <div className="list-container">
+                        {gender.map((item, index) => (
+                            <div key={index}>
+                                <input value={item} type="checkbox" onChange={checkHandler} />
+                                <span>{item}</span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
             <div class="div2">Counter Prodcuts </div>
             <div class="div3">Category Name & Description </div>
             <div class="div4">Sort</div>
@@ -192,14 +211,12 @@ export const Tops = ({products}) => {
                         <div className="product-info"></div>
                     </article>
                 </section> */}
-                {products.length > 0
-                    ? products.map(x => <TopsDetails key={x._id} tops={x} />)
-                    : <span>This user has no tops yet.</span>
+                {checked.length > 0
+                    ? checked == 'male' ? males.map(x => <TopsDetails key={x._id} tops={x} />) : females.map(x => <TopsDetails key={x._id} tops={x} />)
+                    : products.map(x => <TopsDetails key={x._id} tops={x} />)
                 }
             </div>
             <div class="div6">Load More </div>
         </section>
-
-
     )
 }

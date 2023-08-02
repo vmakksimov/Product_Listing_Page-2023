@@ -18,15 +18,6 @@ function App() {
     }
 
 
-
-    // useEffect(() => {
-    //   productService.getProducts()
-    //     .then(res => console.log(res))
-    //     .catch((error) => {
-    //       console.log(error)
-    //     })
-    // }, [])
-
     return (
         <div className="App">
             <section className="App-header">

@@ -2,10 +2,9 @@ import './TopsDetails.css'
 
 
 export const TopsDetails = ({ tops }) => {
-    console.log(tops)
+ 
     return (
         <>
-
             <article className="product-item">
                 <div className="product-image">
                     <img src={tops.image} alt="" />
@@ -18,8 +17,6 @@ export const TopsDetails = ({ tops }) => {
                     <button>Add to cart</button>
                 </div>
             </article>
-
-
         </>
     )
 }
