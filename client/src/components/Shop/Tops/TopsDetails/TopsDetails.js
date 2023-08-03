@@ -10,10 +10,9 @@ export const TopsDetails = ({ tops }) => {
                     <img src={tops.image} alt="" />
                 </div>
                 <div className="product-info">
-                    <p>Black top </p>
-                    <p>Price: 50$</p>
-                    <p>Price: 50$</p>
-                    <p>Men Cartoon Graphic Tee</p>
+                    <p>{tops.name}</p>
+                    <p>{tops.description}</p>
+                    <p>Price: {tops.price}{tops.currency}</p>
                     <button>Add to cart</button>
                 </div>
             </article>

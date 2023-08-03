@@ -17,18 +17,23 @@ function App() {
         setData(products)
     }
 
+    const optionHandler = (option) => {
+        console.log(option)
+        setData(option)
+    }
+
 
     return (
         <div className="App">
             <section className="App-header">
-                <Header />
+                <Header optionHandler={optionHandler}/>
             </section>
 
             <section className="home-section">
 
                 <Routes>
                     <Route path='/' element={<Home />} />
-                    <Route path='/tops' element={<Tops products={products}/>} />
+                    <Route path='/tops' element={<Tops products={products} optionHandler={optionHandler} data={data}/>} />
                     {products && products.map(res => (
                         // <div key={_id} className='row'>
                         //     <strong>{title}</strong>

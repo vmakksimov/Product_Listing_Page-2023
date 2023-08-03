@@ -1,20 +1,24 @@
 import './Tops.css'
 import { useState } from 'react'
 import { TopsDetails } from './TopsDetails/TopsDetails'
-import { Checkbox } from '../Sections'
 
-export const Tops = ({ products }) => {
+export const Tops = ({ products, data }) => {
 
+    const [sorted, setSort] = useState([]);
     const [checked, setChecked] = useState([]);
     const [colored, setColor] = useState([]);
     const gender = ['male', 'female']
     const colors = ['Black', 'White', 'Khaki', 'Light Grey', 'Dark Grey', 'Brown']
 
-    const genders = products.filter(x => checked.includes(x.gender))
-    const color = products.filter(x => colored.includes(x.color))
-    const allMatch = products.filter(x => colored.includes(x.color) && checked.includes(x.gender))
+    if (data == 'Tops'){
+        console.log(data)
+        console.log('haha did it')
+        products.filter(x => x.type == data)
+    }
 
-    console.log(allMatch)
+    let genders = products.filter(x => checked.includes(x.gender))
+    let color = products.filter(x => colored.includes(x.color))
+    let allMatch = products.filter(x => colored.includes(x.color) && checked.includes(x.gender))
 
 
     const genderHandler = (e) => {
@@ -37,7 +41,22 @@ export const Tops = ({ products }) => {
         } else {
             updatedList.splice(colored.indexOf(e.target.value), 1);
         }
+
         setColor(updatedList);
+    }
+
+    const sortHandler = (e) => {
+        setSort(e.target.innerText)
+
+        if (e.target.innerText === 'Low price') {
+            products.sort((a, b) => a.price - b.price)
+        } else if (e.target.innerText === 'High price') {
+            products.sort((a, b) => b.price - a.price)
+        } else if (e.target.innerText === 'Alphabetical a-z') {
+            products.sort((a, b) => a.name.localeCompare(b.name))
+        } else if (e.target.innerText === 'Alphabetical z-a') {
+            products.sort((a, b) => b.name.localeCompare(a.name))
+        }
     }
 
 
@@ -73,23 +92,19 @@ export const Tops = ({ products }) => {
                         Recommended
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Alphabetical a-z</a></li>
-                        <li><a class="dropdown-item" href="#">Alphabetical z-a</a></li>
-                        <li><a class="dropdown-item" href="#">Lowest price</a></li>
-                        <li><a class="dropdown-item" href="#">Highest price</a></li>
+                        <li><button className="dropdown-item" onClick={(e) => sortHandler(e)}>Alphabetical a-z</button></li>
+                        <li><button className="dropdown-item" onClick={(e) => sortHandler(e)}>Alphabetical z-a</button></li>
+                        <li><button className="dropdown-item" onClick={(e) => sortHandler(e)}>Low price</button></li>
+                        <li><button className="dropdown-item" onClick={(e) => sortHandler(e)}>High price</button></li>
                     </ul>
                 </div>
             </div>
             <div class="div5">
 
-                {checked.length == 0 && colored.length > 0
-                    ? color.map(x => <TopsDetails key={x._id} tops={x} />)
-                    : allMatch.length > 0
-                        ? allMatch.map(x => <TopsDetails key={x._id} tops={x} />)
-                        : checked.length == 1
-
-                            ? genders.map(x => <TopsDetails key={x._id} tops={x} />)
-                            : products.map(x => <TopsDetails key={x._id} tops={x} />)
+                {checked.length === 0 && colored.length > 0
+                    ? color.map(x => <TopsDetails key={x._id} tops={x} />) : allMatch.length > 0
+                        ? allMatch.map(x => <TopsDetails key={x._id} tops={x} />) : checked.length === 1
+                            ? genders.map(x => <TopsDetails key={x._id} tops={x} />) : products.map(x => <TopsDetails key={x._id} tops={x} />)
                 }
 
                 {/* {allMatch.length > 0
