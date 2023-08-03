@@ -11,8 +11,6 @@ export const Tops = ({ products, data }) => {
     const colors = ['Black', 'White', 'Khaki', 'Light Grey', 'Dark Grey', 'Brown']
 
     if (data == 'Tops'){
-        console.log(data)
-        console.log('haha did it')
         products.filter(x => x.type == data)
     }
 
