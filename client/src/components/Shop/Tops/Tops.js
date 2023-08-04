@@ -70,8 +70,8 @@ export const Tops = ({ products, data }) => {
     return (
         <section class="tops-content">
             <div class="div1">
-                <div className="filterList">Filter by:
-                    <div className="title">Gender</div>
+                <div className="filterList"><strong>Filter by:</strong>
+                    <div className="title"><h5>Gender</h5></div>
                     <div className="filter-container">
                         {gender.map((item, index) => (
                             <div key={index}>
@@ -80,7 +80,7 @@ export const Tops = ({ products, data }) => {
                             </div>
                         ))}
                     </div>
-                    <div className="title">Color</div>
+                    <div className="title"><h5>Color</h5></div>
                     <div className="filter-container">
                         {colors.map((item, index) => (
                             <div key={index}>

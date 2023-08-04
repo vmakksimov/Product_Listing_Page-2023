@@ -37,3 +37,15 @@
     flex-wrap: wrap;
     width: 100%;
 }
+
+.title {
+    margin-top: 20px;
+}
+
+.filter-container {
+    margin-bottom: 20px;
+}
+
+.filterList {
+    margin: 10px;
+}

@@ -2,7 +2,10 @@ import './TopsDetails.css'
 
 
 export const TopsDetails = ({ tops }) => {
- 
+    
+    const alertHandler = () => {
+        window.alert('The product was succesfully added to the cart!')
+    }
     return (
         <>
             <article className="product-item">
@@ -13,7 +16,7 @@ export const TopsDetails = ({ tops }) => {
                     <p>{tops.name}</p>
                     <p>{tops.description}</p>
                     <p>Price: {tops.price}{tops.currency}</p>
-                    <button>Add to cart</button>
+                    <button onClick={alertHandler}>Add to cart</button>
                 </div>
             </article>
         </>

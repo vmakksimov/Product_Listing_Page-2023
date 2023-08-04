@@ -2,7 +2,7 @@
 // import './App.css';
 import './styles/index.css'
 import products from './local-json/products.json'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Header } from "./components/Header/Header";
 import { Home } from "./components/Home/Home";
 import { Routes, Route } from 'react-router-dom';
@@ -22,27 +22,17 @@ function App() {
         setData(option)
     }
 
-
     return (
         <div className="App">
             <section className="App-header">
-                <Header optionHandler={optionHandler}/>
+                <Header optionHandler={optionHandler} />
             </section>
-
             <section className="home-section">
-
                 <Routes>
                     <Route path='/' element={<Home />} />
-                    <Route path='/tops' element={<Tops products={products} optionHandler={optionHandler} data={data}/>} />
-                    {products && products.map(res => (
-                        // <div key={_id} className='row'>
-                        //     <strong>{title}</strong>
-                        // </div>
-                        console.log(res)
-                    ))}
+                    <Route path='/tops' element={<Tops products={products} optionHandler={optionHandler} data={data} />} />
                 </Routes>
             </section>
-
             <Footer />
         </div>
     );
