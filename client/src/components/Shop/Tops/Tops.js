@@ -3,20 +3,25 @@ import { useState } from 'react'
 import { TopsDetails } from './TopsDetails/TopsDetails'
 
 export const Tops = ({ products, data }) => {
+    const itemsPerRow = 16
+    const [next, setNext] = useState(itemsPerRow);
 
     const [sorted, setSort] = useState([]);
     const [checked, setChecked] = useState([]);
     const [colored, setColor] = useState([]);
-    const gender = ['male', 'female']
-    const colors = ['Black', 'White', 'Khaki', 'Light Grey', 'Dark Grey', 'Brown']
 
-    if (data == 'Tops'){
+
+    const gender = ['male', 'female']
+    const colors = ['Black', 'White', 'Khaki', 'Light Grey', 'Dark Grey', 'Brown', 'Apricot']
+
+    if (data == 'Tops') {
         products.filter(x => x.type == data)
     }
 
     let genders = products.filter(x => checked.includes(x.gender))
     let color = products.filter(x => colored.includes(x.color))
     let allMatch = products.filter(x => colored.includes(x.color) && checked.includes(x.gender))
+  
 
 
     const genderHandler = (e) => {
@@ -55,6 +60,12 @@ export const Tops = ({ products, data }) => {
         } else if (e.target.innerText === 'Alphabetical z-a') {
             products.sort((a, b) => b.name.localeCompare(a.name))
         }
+    }
+
+    const loadMoreHandler = () => {
+        setNext(next + itemsPerRow);
+        // products = products?.slice(0, next)?.map(x => x)
+       
     }
 
 
@@ -98,31 +109,25 @@ export const Tops = ({ products, data }) => {
                 </div>
             </div>
             <div class="div5">
-
+                {/* {products?.slice(0, next)?.map(x => <TopsDetails key={x._id} tops={x} />) } */}
                 {checked.length === 0 && colored.length > 0
-                    ? color.map(x => <TopsDetails key={x._id} tops={x} />) : allMatch.length > 0
-                        ? allMatch.map(x => <TopsDetails key={x._id} tops={x} />) : checked.length === 1
-                            ? genders.map(x => <TopsDetails key={x._id} tops={x} />) : products.map(x => <TopsDetails key={x._id} tops={x} />)
+                    ? color?.slice(0, next)?.map(x => <TopsDetails key={x._id} tops={x} />) : allMatch.length > 0
+                        ? allMatch?.slice(0, next)?.map(x => <TopsDetails key={x._id} tops={x} />) : checked.length === 1
+                            ? genders?.slice(0, next)?.map(x => <TopsDetails key={x._id} tops={x} />) : products?.slice(0, next)?.map(x => <TopsDetails key={x._id} tops={x} />)
                 }
 
-                {/* {allMatch.length > 0
-                ? allMatch.map(x => <TopsDetails key={x._id} tops={x} />)
-                :   checked.length == 1
-
-                ? genders.map(x => <TopsDetails key={x._id} tops={x} />)
-                : products.map(x => <TopsDetails key={x._id} tops={x} />)
-            } */}
-
-                {/* {checked.length == 1
-                    ? genders.map(x => <TopsDetails key={x._id} tops={x} />)
-                    : products.map(x => <TopsDetails key={x._id} tops={x} />)
-                } */}
-                {/* {colored.length > 0 &&
-                     color.map(x => <TopsDetails key={x._id} tops={x} />)
-                 
-                } */}
             </div>
-            <div class="div6">Load More </div>
+
+            <div class="div6">
+                {next < products?.length && (
+                    <button className='load-more'
+
+                        onClick={loadMoreHandler}
+                    >
+                        Load more
+                    </button>
+                )}
+            </div>
         </section>
     )
 }

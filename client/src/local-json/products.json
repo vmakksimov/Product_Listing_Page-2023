@@ -316,7 +316,7 @@
         "_id": 25,
         "liked": "false",
         "added_to_cart": "false",
-        "gender": "female",
+        "gender": "male",
         "type": "Tops",
         "description": "Material: Fabric; Composition: 95% Polyester 5% Elastane;",
         "name": "Manfinity Homme Men Contrast Trim Tee",
@@ -329,7 +329,7 @@
         "_id": 26,
         "liked": "false",
         "added_to_cart": "false",
-        "gender": "female",
+        "gender": "male",
         "type": "Tops",
         "description": "Material: Fabric; Composition: 65% Polyester, 35% Cotton;",
         "name": "Manfinity Homme Men Cotton Half Button Drop Shoulder Tee",
@@ -342,7 +342,7 @@
         "_id": 27,
         "liked": "false",
         "added_to_cart": "false",
-        "gender": "female",
+        "gender": "male",
         "type": "Tops",
         "description": "Material: Fabric; Composition: 95% Polyester, 5% Elastane;",
         "name": "Manfinity Homme Men Letter Graphic Curved Hem Tee",
@@ -355,7 +355,7 @@
         "_id": 28,
         "liked": "false",
         "added_to_cart": "false",
-        "gender": "female",
+        "gender": "male",
         "type": "Tops",
         "description": "Material: Medium Stretch; Composition: 100% Polyester;",
         "name": "Manfinity Homme Men Letter Graphic Hem Tee",
@@ -368,7 +368,7 @@
         "_id": 29,
         "liked": "false",
         "added_to_cart": "false",
-        "gender": "female",
+        "gender": "male",
         "type": "Tops",
         "description": "Material: Fabric; Composition: 92% Polyester, 8% Elastane;",
         "name": "Manfinity Homme Men Letter Graphic Tee",
@@ -384,11 +384,11 @@
         "gender": "female",
         "type": "Tops",
         "description": "Material: Fabric; Composition: 95% Polyester, 5% Elastane;",
-        "name": "EZwear Solid Drop Shoulder Tee",
-        "color": "Black",
+        "name": "Essnce Rib-knit Solid Crop Cami Top",
+        "color": "White",
         "price": "23.99",
         "currency" : "$",
-        "image": "images/top15.jpg"
+        "image": "images/top32.jpg"
     },
     {
         "_id": 31,
@@ -396,12 +396,12 @@
         "added_to_cart": "false",
         "gender": "female",
         "type": "Tops",
-        "description": "Material: Fabric; Composition: 95% Polyester, 5% Elastane; Color: Black",
+        "description": "Material: Fabric; Composition: 95% Polyester, 5% Elastane;",
         "name": "Privé Rib-knit Solid Crop Tank Top",
-        "price": "15",
+        "price": "15.99",
         "currency" : "$",
-        "color": "Black",
-        "image": "images/top16.jpg"
+        "color": "White",
+        "image": "images/top33.jpg"
     },
     {
         "_id": 32,
@@ -409,12 +409,12 @@
         "added_to_cart": "false",
         "gender": "female",
         "type": "Tops",
-        "description": "Material: Slight Stretch; Composition: 100% Polyester",
-        "name": "Solid Form Fitted Crop Cami Top",
-        "price": "14.99",
+        "description": "Material: Fabric; Composition: 100% Polyester",
+        "name": "Frenchy Notched Neck Batwing Sleeve Blouse",
+        "price": "18.99",
         "currency" : "$",
-        "color": "White",
-        "image": "images/top17.jpg"
+        "color": "Apricot",
+        "image": "images/top34.jpg"
     },
     {
         "_id": 33,
@@ -422,12 +422,12 @@
         "added_to_cart": "false",
         "gender": "female",
         "type": "Tops",
-        "description": "Material: Slight Stretch; Composition: 100% Polyester",
-        "name": "Solid Form Fitted Crop Cami Top",
-        "price": "14.99",
+        "description": "Material: Fabric; Composition: 100% Polyester",
+        "name": "Clasi Tie Back Batwing Sleeve Solid Blouse",
+        "price": "19.99",
         "currency" : "$",
-        "color": "White",
-        "image": "images/top17.jpg"
+        "color": "Black",
+        "image": "images/top35.jpg"
     },
     {
         "_id": 34,
@@ -436,11 +436,11 @@
         "gender": "female",
         "type": "Tops",
         "description": "Material: Slight Stretch; Composition: 100% Polyester",
-        "name": "Solid Form Fitted Crop Cami Top",
-        "price": "14.99",
+        "name": "Lace Trim Cami Top",
+        "price": "10.99",
         "currency" : "$",
         "color": "White",
-        "image": "images/top17.jpg"
+        "image": "images/top36.jpg"
     },
     {
         "_id": 35,
@@ -448,12 +448,12 @@
         "added_to_cart": "false",
         "gender": "female",
         "type": "Tops",
-        "description": "Material: Slight Stretch; Composition: 100% Polyester",
-        "name": "Solid Form Fitted Crop Cami Top",
-        "price": "14.99",
+        "description": "Material: Fabric; Composition: 100% Polyester",
+        "name": "Essnce Form-Fitting V-Neck Tank Top",
+        "price": "21.99",
         "currency" : "$",
-        "color": "White",
-        "image": "images/top17.jpg"
+        "color": "Black",
+        "image": "images/top37.jpg"
     },
     {
         "_id": 36,
@@ -461,12 +461,12 @@
         "added_to_cart": "false",
         "gender": "female",
         "type": "Tops",
-        "description": "Material: Slight Stretch; Composition: 100% Polyester",
-        "name": "Solid Form Fitted Crop Cami Top",
-        "price": "14.99",
+        "description": "Material: Fabric; Composition: 100% Polyester",
+        "name": "Tall Draped Collar Ruched Cami Top",
+        "price": "31.99",
         "currency" : "$",
         "color": "White",
-        "image": "images/top17.jpg"
+        "image": "images/top38.jpg"
     }
 
 ]
