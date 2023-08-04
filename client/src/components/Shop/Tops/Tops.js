@@ -3,14 +3,13 @@ import { useState } from 'react'
 import { TopsDetails } from './TopsDetails/TopsDetails'
 
 export const Tops = ({ products, data }) => {
+
     const itemsPerRow = 16
     const [next, setNext] = useState(itemsPerRow);
 
     const [sorted, setSort] = useState([]);
     const [checked, setChecked] = useState([]);
     const [colored, setColor] = useState([]);
-
-
     const gender = ['male', 'female']
     const colors = ['Black', 'White', 'Khaki', 'Light Grey', 'Dark Grey', 'Brown', 'Apricot']
 
@@ -21,8 +20,6 @@ export const Tops = ({ products, data }) => {
     let genders = products.filter(x => checked.includes(x.gender))
     let color = products.filter(x => colored.includes(x.color))
     let allMatch = products.filter(x => colored.includes(x.color) && checked.includes(x.gender))
-  
-
 
     const genderHandler = (e) => {
         let updatedList = [...checked];
@@ -48,27 +45,28 @@ export const Tops = ({ products, data }) => {
         setColor(updatedList);
     }
 
-    const sortHandler = (e) => {
-        setSort(e.target.innerText)
-
-        if (e.target.innerText === 'Low price') {
+    const sortHandler = (value) => {
+        if (value === 'low-price') {
             products.sort((a, b) => a.price - b.price)
-        } else if (e.target.innerText === 'High price') {
+        } else if (value === 'high-price') {
             products.sort((a, b) => b.price - a.price)
-        } else if (e.target.innerText === 'Alphabetical a-z') {
+        } else if (value === 'ascending') {
             products.sort((a, b) => a.name.localeCompare(b.name))
-        } else if (e.target.innerText === 'Alphabetical z-a') {
+        } else if (value === 'descending') {
             products.sort((a, b) => b.name.localeCompare(a.name))
+        }else{
+            products.sort((a, b) => a._id - b._id)
         }
+        setSort(value)
     }
 
     const loadMoreHandler = () => {
-        setNext(next + itemsPerRow);
-        // products = products?.slice(0, next)?.map(x => x)
-       
+        if (next + itemsPerRow > products.length) {
+            setNext(products.length)
+        } else {
+            setNext(next + itemsPerRow);
+        }
     }
-
-
     return (
         <section class="tops-content">
             <div class="div1">
@@ -93,31 +91,26 @@ export const Tops = ({ products, data }) => {
                     </div>
                 </div>
             </div>
-            <div class="div2">Counter Prodcuts </div>
-            <div class="div3">Category Name & Description</div>
+            <div class="div2">{next} products of {products.length} </div>
+            <div class="div3">{data == 'Tops' && <><h1>Tops, Blouses & Tea</h1><p>Mens & Womens collection 2023</p></>}</div>
             <div class="div4">
-                <div class="dropdown">Sort by
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Recommended
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><button className="dropdown-item" onClick={(e) => sortHandler(e)}>Alphabetical a-z</button></li>
-                        <li><button className="dropdown-item" onClick={(e) => sortHandler(e)}>Alphabetical z-a</button></li>
-                        <li><button className="dropdown-item" onClick={(e) => sortHandler(e)}>Low price</button></li>
-                        <li><button className="dropdown-item" onClick={(e) => sortHandler(e)}>High price</button></li>
-                    </ul>
+                <div className="sorting">Sort by
+                    <select className="sorting-options" onClick={(e) => sortHandler(e.target.value)}>
+                        <option value="default">Default</option>
+                        <option value="ascending" >Alphabetically, A-Z</option>
+                        <option value="descending" >Alphabetically, Z-A</option>
+                        <option value="high-price">High Price</option>
+                        <option value="low-price">Low Price</option>
+                    </select>
                 </div>
             </div>
             <div class="div5">
-                {/* {products?.slice(0, next)?.map(x => <TopsDetails key={x._id} tops={x} />) } */}
                 {checked.length === 0 && colored.length > 0
                     ? color?.slice(0, next)?.map(x => <TopsDetails key={x._id} tops={x} />) : allMatch.length > 0
                         ? allMatch?.slice(0, next)?.map(x => <TopsDetails key={x._id} tops={x} />) : checked.length === 1
                             ? genders?.slice(0, next)?.map(x => <TopsDetails key={x._id} tops={x} />) : products?.slice(0, next)?.map(x => <TopsDetails key={x._id} tops={x} />)
                 }
-
             </div>
-
             <div class="div6">
                 {next < products?.length && (
                     <button className='load-more'

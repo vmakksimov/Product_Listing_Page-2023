@@ -1,3 +1,15 @@
 html {
     box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.App-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.home-section {
+    padding-top: 5.7%;
 }
