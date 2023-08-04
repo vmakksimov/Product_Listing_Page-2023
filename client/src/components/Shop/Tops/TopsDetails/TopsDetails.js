@@ -16,7 +16,7 @@ export const TopsDetails = ({ tops }) => {
                     <p>{tops.name}</p>
                     <p>{tops.description}</p>
                     <p>Price: {tops.price}{tops.currency}</p>
-                    <button onClick={alertHandler}>Add to cart</button>
+                    <button className='cart-button' onClick={alertHandler}>Add to cart</button>
                 </div>
             </article>
         </>

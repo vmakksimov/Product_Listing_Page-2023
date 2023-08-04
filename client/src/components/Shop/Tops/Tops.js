@@ -5,7 +5,8 @@ import { ProductsContext } from '../../../context/productContext'
 
 export const Tops = () => {
 
-    const { products, data } = useContext(ProductsContext);
+    const { products, name } = useContext(ProductsContext);
+   
 
     const itemsPerRow = 16
     const [next, setNext] = useState(itemsPerRow);
@@ -16,9 +17,12 @@ export const Tops = () => {
     const gender = ['male', 'female']
     const colors = ['Black', 'White', 'Khaki', 'Light Grey', 'Dark Grey', 'Brown', 'Apricot']
 
-    if (data == 'Tops') {
-        products.filter(x => x.type == data)
-    }
+    console.log(name)
+
+    // if (currentData) {
+    
+    //     products.filter(x => x.type == 'Tops')
+    // }
 
     let genders = products.filter(x => checked.includes(x.gender))
     let color = products.filter(x => colored.includes(x.color))
@@ -95,7 +99,7 @@ export const Tops = () => {
                 </div>
             </div>
             <div class="div2">{next} products of {products.length} </div>
-            <div class="div3">{data == 'Tops' && <><h1>Tops, Blouses & Tea</h1><p>Mens & Womens collection 2023</p></>}</div>
+            <div class="div3">{name == 'Tops' && <><h1>Tops, Blouses & Tea</h1><p>Mens & Womens collection 2023</p></>}</div>
             <div class="div4">
                 <div className="sorting">Sort by
                     <select className="sorting-options" onClick={(e) => sortHandler(e.target.value)}>

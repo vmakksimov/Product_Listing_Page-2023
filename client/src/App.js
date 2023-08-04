@@ -12,23 +12,28 @@ import { ProductsContext } from './context/productContext';
 
 
 function App() {
+
+    const [name, setName] = useState(localStorage.getItem("name") || undefined)
+
+    const handleFormChange = (event) => {
+        setName(event)
+        localStorage.setItem("name", event);
+    }
+
     const [data, setData] = useState([]);
 
-    const setProducts = () => {
-        setData(products)
-    }
 
-    const optionHandler = (option) => {
-        console.log(option)
-        setData(option)
-    }
+    // const optionHandler = (option) => {
+    //     console.log(option)
+    //     setData(option)
+    // }
 
     return (
         <div className="App">
             <section className="App-header">
-                <Header optionHandler={optionHandler} />
+                <Header handleFormChange={handleFormChange} />
             </section>
-            <ProductsContext.Provider value={{products, data, optionHandler}}>
+            <ProductsContext.Provider value={{ products, name }}>
                 <section className="home-section">
                     <Routes>
                         <Route path='/' element={<Home />} />
