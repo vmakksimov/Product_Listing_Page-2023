@@ -1,8 +1,11 @@
 import './Tops.css'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { TopsDetails } from './TopsDetails/TopsDetails'
+import { ProductsContext } from '../../../context/productContext'
 
-export const Tops = ({ products, data }) => {
+export const Tops = () => {
+
+    const { products, data } = useContext(ProductsContext);
 
     const itemsPerRow = 16
     const [next, setNext] = useState(itemsPerRow);
@@ -54,7 +57,7 @@ export const Tops = ({ products, data }) => {
             products.sort((a, b) => a.name.localeCompare(b.name))
         } else if (value === 'descending') {
             products.sort((a, b) => b.name.localeCompare(a.name))
-        }else{
+        } else {
             products.sort((a, b) => a._id - b._id)
         }
         setSort(value)

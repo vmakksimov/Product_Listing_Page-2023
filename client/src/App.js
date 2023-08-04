@@ -8,6 +8,7 @@ import { Home } from "./components/Home/Home";
 import { Routes, Route } from 'react-router-dom';
 import { Footer } from './components/Footer/Footer';
 import { Tops } from './components/Shop/Tops/Tops';
+import { ProductsContext } from './context/productContext';
 
 
 function App() {
@@ -27,12 +28,14 @@ function App() {
             <section className="App-header">
                 <Header optionHandler={optionHandler} />
             </section>
-            <section className="home-section">
-                <Routes>
-                    <Route path='/' element={<Home />} />
-                    <Route path='/tops' element={<Tops products={products} optionHandler={optionHandler} data={data} />} />
-                </Routes>
-            </section>
+            <ProductsContext.Provider value={{products, data, optionHandler}}>
+                <section className="home-section">
+                    <Routes>
+                        <Route path='/' element={<Home />} />
+                        <Route path='/tops' element={<Tops />} />
+                    </Routes>
+                </section>
+            </ProductsContext.Provider>
             <Footer />
         </div>
     );
