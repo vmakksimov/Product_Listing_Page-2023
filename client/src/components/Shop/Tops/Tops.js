@@ -4,29 +4,34 @@ import { TopsDetails } from './TopsDetails/TopsDetails'
 import { ProductsContext } from '../../../context/productContext'
 
 export const Tops = () => {
-
-    const { products, name } = useContext(ProductsContext);
-   
-
     const itemsPerRow = 16
+    const { products, name } = useContext(ProductsContext);
     const [next, setNext] = useState(itemsPerRow);
-
     const [sorted, setSort] = useState([]);
     const [checked, setChecked] = useState([]);
     const [colored, setColor] = useState([]);
     const gender = ['male', 'female']
     const colors = ['Black', 'White', 'Khaki', 'Light Grey', 'Dark Grey', 'Brown', 'Apricot']
-
-    console.log(name)
-
-    // if (currentData) {
     
-    //     products.filter(x => x.type == 'Tops')
-    // }
+    let tops;
+    let bottoms;
+    let genders;
+    let color;
+    let allMatch;
 
-    let genders = products.filter(x => checked.includes(x.gender))
-    let color = products.filter(x => colored.includes(x.color))
-    let allMatch = products.filter(x => colored.includes(x.color) && checked.includes(x.gender))
+    if (name == 'Tops') {
+        tops = products.filter(x => x.type == 'Tops')
+        genders = tops.filter(x => checked.includes(x.gender))
+        color = tops.filter(x => colored.includes(x.color))
+        allMatch = tops.filter(x => colored.includes(x.color) && checked.includes(x.gender))
+    } else {
+        bottoms = products.filter(x => x.type == 'Bottoms')
+        genders = bottoms.filter(x => checked.includes(x.gender))
+        color = bottoms.filter(x => colored.includes(x.color))
+        allMatch = bottoms.filter(x => colored.includes(x.color) && checked.includes(x.gender))
+    }
+
+
 
     const genderHandler = (e) => {
         let updatedList = [...checked];
@@ -99,7 +104,7 @@ export const Tops = () => {
                 </div>
             </div>
             <div class="div2">{next} products of {products.length} </div>
-            <div class="div3">{name == 'Tops' && <><h1>Tops, Blouses & Tea</h1><p>Mens & Womens collection 2023</p></>}</div>
+            <div class="div3">{name == 'Tops' ? <><h1>Tops, Blouses & Tea</h1><p>Mens & Womens collection 2023</p></> : <><h1>Bottoms, Leggings & Sweatpants</h1><p>Mens & Womens collection 2023</p></>}</div>
             <div class="div4">
                 <div className="sorting">Sort by
                     <select className="sorting-options" onClick={(e) => sortHandler(e.target.value)}>
@@ -112,10 +117,10 @@ export const Tops = () => {
                 </div>
             </div>
             <div class="div5">
-                {checked.length === 0 && colored.length > 0
-                    ? color?.slice(0, next)?.map(x => <TopsDetails key={x._id} tops={x} />) : allMatch.length > 0
-                        ? allMatch?.slice(0, next)?.map(x => <TopsDetails key={x._id} tops={x} />) : checked.length === 1
-                            ? genders?.slice(0, next)?.map(x => <TopsDetails key={x._id} tops={x} />) : products?.slice(0, next)?.map(x => <TopsDetails key={x._id} tops={x} />)
+                {checked.length === 0 && colored.length > 0 ? color?.slice(0, next)?.map(x => <TopsDetails key={x._id} tops={x} />) : allMatch.length > 0
+                    ? allMatch?.slice(0, next)?.map(x => <TopsDetails key={x._id} tops={x} />) : checked.length === 1
+                        ? genders?.slice(0, next)?.map(x => <TopsDetails key={x._id} tops={x} />) : name == 'Tops' ? tops?.slice(0, next)?.map(x => <TopsDetails key={x._id} tops={x} />)
+                            : bottoms?.slice(0, next)?.map(x => <TopsDetails key={x._id} tops={x} />)
                 }
             </div>
             <div class="div6">

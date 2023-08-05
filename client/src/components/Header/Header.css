@@ -35,22 +35,6 @@
     margin: 15px;
 }
 
-.header-buttons{
-    /* margin: 15px; */
-    font-size: 1.5rem;
-}
-
-.header-buttons:hover {
-    margin: 5px;
-    border: 0px;
-    height: 54%;
-    font-size: 1.5rem;
-    border-radius: 3px;
-    box-shadow: 0px 3px 8px 1px #1f1f1e;
-    background: #bebbb947;
-    color: white;
-}
-
 .home-shop {
     border: 0px;
     padding: 5px 61px;

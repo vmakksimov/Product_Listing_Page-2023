@@ -1,6 +1,6 @@
-.product-item {
+/* .product-item {
     width: 25%;
-}
+} */
 
 .product-image {
     width: 100%;
@@ -8,13 +8,6 @@
 
 .product-image img {
     width: 86%;
-}
-
-.cart-button {
-    padding: 10px 28px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 7px;
 }
 
 p {
