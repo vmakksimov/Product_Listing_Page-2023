@@ -37,11 +37,6 @@
     flex-wrap: wrap;
     width: 100%;
 }
-.div6 {
-    margin-left: 73px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
 
 .title {
     margin-top: 20px;
@@ -53,9 +48,4 @@
 
 .filterList {
     margin: 10px;
-}
-
-.load-more {
-    padding: 20px 50px;
-    border-radius: 12px;
 }

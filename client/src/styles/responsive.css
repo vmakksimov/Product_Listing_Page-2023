@@ -3,6 +3,11 @@
         flex-direction: column;
     }
 
+    .div5 {
+        flex-direction: column;
+    }
+
+
     .header-buttons a{
         font-size: 20px;
     }
@@ -21,7 +26,12 @@
     }
 
     .product-item {
-        width: 48%;
+        width: 100%;
+    }
+
+    .product-info {
+        display: flex;
+        flex-direction: column;
     }
 
     .cart-button {
@@ -33,7 +43,7 @@
     }
 
     .home-section {
-        padding-top: 11.8%;
+        padding-top: 16.8%;
     }
 
     .sorting-options {
@@ -49,14 +59,25 @@
     }
 
     .div3 h1 {
-        font-size: 21px;
+        font-size: 17px;
     }
 
     .product-info {
         width: 86%;
     }
 
-    .div5 > .product-item > .product-info > p:nth-child(2){
-        margin-bottom: 35px;
+    .div6 {
+        display: flex;
+        justify-content: center;
+        margin-left: 0px;
     }
+
+    .load-more{
+        padding: 12px 103px;
+    }
+
+    p {
+        height: auto;
+    }
+
 }
