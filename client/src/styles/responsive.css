@@ -9,7 +9,7 @@
 
 
     .header-buttons a{
-        font-size: 20px;
+        font-size: 17px;
     }
 
     .header-buttons:hover{
@@ -36,6 +36,7 @@
 
     .cart-button {
         padding: 5px 10px;
+        width: 100%;
     }
 
     .sorting {
@@ -46,12 +47,35 @@
         padding-top: 16.8%;
     }
 
+    .select-option {
+        font-size: 0.8rem;
+    }
+
     .sorting-options {
         width: 80px;
     }
 
+    .select-dropdown-sm .select-option {
+        font-size: 0.8rem;
+    }
+    .select-dropdown-sm .input-group {
+      padding: 8px;
+    }
+    .select-dropdown-sm .select-filter-input {
+      font-size: 0.8rem;
+      height: calc(1.664rem + 2px);
+      min-height: calc(1.664rem + 2px);
+      padding-top: 0.216rem;
+      padding-bottom: 0.216rem;
+    }
+    .select-dropdown-sm .select-no-results {
+      font-size: 0.8rem;
+    }
+
+  
+
     .filterList {
-        margin: 0px;
+        margin: 7px;
     }
 
     .div3 p {

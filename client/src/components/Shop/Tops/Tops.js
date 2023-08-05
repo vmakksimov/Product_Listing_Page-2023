@@ -12,7 +12,7 @@ export const Tops = () => {
     const [colored, setColor] = useState([]);
     const gender = ['male', 'female']
     const colors = ['Black', 'White', 'Khaki', 'Light Grey', 'Dark Grey', 'Brown', 'Apricot']
-    
+
     let tops;
     let bottoms;
     let genders;
@@ -103,11 +103,15 @@ export const Tops = () => {
                     </div>
                 </div>
             </div>
-            <div class="div2">{next} products of {products.length} </div>
             <div class="div3">{name == 'Tops' ? <><h1>Tops, Blouses & Tea</h1><p>Mens & Womens collection 2023</p></> : <><h1>Bottoms, Leggings & Sweatpants</h1><p>Mens & Womens collection 2023</p></>}</div>
             <div class="div4">
                 <div className="sorting">Sort by
-                    <select className="sorting-options" onClick={(e) => sortHandler(e.target.value)}>
+                    <select className="sorting-options"
+                        data-mdb-size="sm"
+                        data-mdb-option-height="30.5"
+                        data-mdb-container=".select-dropdown-sm"
+                        data-mdb-filter="true"
+                        onClick={(e) => sortHandler(e.target.value)}>
                         <option value="default">Default</option>
                         <option value="ascending" >Alphabetically, A-Z</option>
                         <option value="descending" >Alphabetically, Z-A</option>
@@ -116,7 +120,9 @@ export const Tops = () => {
                     </select>
                 </div>
             </div>
+            <div class="show-products">{next} products of {products.length} </div>
             <div class="div5">
+                
                 {checked.length === 0 && colored.length > 0 ? color?.slice(0, next)?.map(x => <TopsDetails key={x._id} tops={x} />) : allMatch.length > 0
                     ? allMatch?.slice(0, next)?.map(x => <TopsDetails key={x._id} tops={x} />) : checked.length === 1
                         ? genders?.slice(0, next)?.map(x => <TopsDetails key={x._id} tops={x} />) : name == 'Tops' ? tops?.slice(0, next)?.map(x => <TopsDetails key={x._id} tops={x} />)
