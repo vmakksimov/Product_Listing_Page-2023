@@ -2,7 +2,7 @@ import './TopsDetails.css'
 
 
 export const TopsDetails = ({ tops }) => {
-    
+
     const alertHandler = () => {
         window.alert('The product was succesfully added to the cart!')
     }
@@ -13,10 +13,15 @@ export const TopsDetails = ({ tops }) => {
                     <img src={tops.image} alt="" />
                 </div>
                 <div className="product-info">
-                    <p>{tops.name}</p>
-                    <p>{tops.description}</p>
-                    <p>Price: {tops.price}{tops.currency}</p>
-                    <button className='cart-button' onClick={alertHandler}>Add to cart</button>
+
+                    <p style={{ fontWeight: '700' }}>{tops.name}</p>
+                    <p style={{ fontSize: '12px' }}>{tops.description}</p>
+                    <p style={{ fontWeight: '300' }}>Price: {tops.price}{tops.currency}</p>
+
+                    <div className='add-button'>
+                        <button className='cart-button' onClick={alertHandler}>ADD TO CART</button>
+                    </div>
+
                 </div>
             </article>
         </>

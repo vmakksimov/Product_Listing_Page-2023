@@ -21,7 +21,7 @@ export const Home = () => {
             <section className="home-types">
                 <div className="type-men">
                     <div className='type-content'>
-                        <h1>Men</h1>
+                        <h1>Shoes</h1>
                         <p>Summer 2023</p>
                     </div>
                     <div className='type-image-men'>
@@ -30,7 +30,7 @@ export const Home = () => {
                 </div>
                 <div className="type-women">
                 <div className='type-content'>
-                        <h1>Women</h1>
+                        <h1>Accssesoaries</h1>
                         <p>Summer 2023</p>
                     </div>
                     <div className='type-image-women'>
