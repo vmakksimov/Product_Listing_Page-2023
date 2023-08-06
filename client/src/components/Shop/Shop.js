@@ -5,7 +5,7 @@ import { ProductsContext } from '../../context/productContext'
 
 export const Shop = () => {
     const itemsPerRow = 16
-    const { products, name } = useContext(ProductsContext);
+    const { products, gender } = useContext(ProductsContext);
     const [next, setNext] = useState(itemsPerRow);
     const [sorted, setSort] = useState([]);
     const [checked, setChecked] = useState([]);
@@ -19,7 +19,7 @@ export const Shop = () => {
     let color;
     let allMatch;
 
-    if (name == 'Men') {
+    if (gender == 'Men') {
         types = men.filter(x => checked.includes(x.type))
         color = men.filter(x => colored.includes(x.color))
         allMatch = men.filter(x => colored.includes(x.color) && checked.includes(x.type))
@@ -114,13 +114,13 @@ export const Shop = () => {
                 </select>
             </div></div>
             <div class="counter">
-                {name == 'Men' ? next > men.length ? men.length : next : next > women.length ? women.length : next} products of {name == 'Men' ? men.length : women.length}
+                {gender == 'Men' ? next > men.length ? men.length : next : next > women.length ? women.length : next} products of {gender == 'Men' ? men.length : women.length}
             </div>
             <div class="product-grid">
                 {checked.length === 0 && colored.length > 0 ? color?.slice(0, next)?.map(x => <ShopDetails key={x._id} tops={x} />)
                     : allMatch.length > 0 ? allMatch?.slice(0, next)?.map(x => <ShopDetails key={x._id} tops={x} />)
                         : checked.length === 1
-                            ? types?.slice(0, next)?.map(x => <ShopDetails key={x._id} tops={x} />) : name == 'Men' ? men?.slice(0, next)?.map(x => <ShopDetails key={x._id} tops={x} />)
+                            ? types?.slice(0, next)?.map(x => <ShopDetails key={x._id} tops={x} />) : gender == 'Men' ? men?.slice(0, next)?.map(x => <ShopDetails key={x._id} tops={x} />)
                                 : women?.slice(0, next)?.map(x => <ShopDetails key={x._id} tops={x} />)
                 }
             </div>
