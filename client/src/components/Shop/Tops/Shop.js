@@ -1,9 +1,9 @@
-import './Tops.css'
+import './Shop.css'
 import { useState, useContext } from 'react'
 import { TopsDetails } from './TopsDetails/TopsDetails'
 import { ProductsContext } from '../../../context/productContext'
 
-export const Tops = () => {
+export const Shop = () => {
     const itemsPerRow = 16
     const { products, name } = useContext(ProductsContext);
     const [next, setNext] = useState(itemsPerRow);
@@ -30,7 +30,6 @@ export const Tops = () => {
         color = women.filter(x => colored.includes(x.color))
         allMatch = women.filter(x => colored.includes(x.color) && checked.includes(x.type))
     }
-
 
 
     const typeHandler = (e) => {
@@ -122,7 +121,7 @@ export const Tops = () => {
                 </select>
             </div></div>
             <div class="div4">
-                {next} products of {products.length}
+                {next > products.filter(x => x.gender == 'male').length ? products.filter(x => x.gender == 'male').length : next} products of {name == 'Men' ? men.length : women.length}
             </div>
 
             <div class="div5">
@@ -134,7 +133,7 @@ export const Tops = () => {
                 }
             </div>
             <div class="div6">
-                {next < products?.length && (
+                {next < products.filter(x => x.gender == 'male')?.length && (
                     <button className='load-more'
 
                         onClick={loadMoreHandler}

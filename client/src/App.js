@@ -8,7 +8,7 @@ import { Header } from "./components/Header/Header";
 import { Home } from "./components/Home/Home";
 import { Routes, Route } from 'react-router-dom';
 import { Footer } from './components/Footer/Footer';
-import { Tops } from './components/Shop/Tops/Tops';
+import { Shop } from './components/Shop/Tops/Shop';
 import { ProductsContext } from './context/productContext';
 
 
@@ -31,7 +31,7 @@ function App() {
                 <section className="home-section">
                     <Routes>
                         <Route path='/' element={<Home />} />
-                        <Route path='/tops' element={<Tops />} />
+                        <Route path='/shop' element={<Shop />} />
                     </Routes>
                 </section>
             </ProductsContext.Provider>

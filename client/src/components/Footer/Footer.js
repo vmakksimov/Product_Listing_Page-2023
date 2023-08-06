@@ -8,9 +8,9 @@ export const Footer = () => {
                 <h4>Project Listing Page by Viktor Maksimov 2023</h4>
             </article>
             <ul className='footer-links'>
-                <li><Link to=''>CONTACT US</Link></li>
+                <li><Link to=''>Contact Us</Link></li>
                 <li><Link to=''>Terms & Conditions</Link></li>
-                <li><Link to=''>HELP CENTER</Link></li>
+                <li><Link to=''>Help Center</Link></li>
             </ul>
         </section>
     )

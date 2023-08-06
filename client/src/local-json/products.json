@@ -935,6 +935,32 @@
         "currency" : "$",
         "color": "Khaki",
         "image": "images/top74.jpg"
+    },
+    {
+        "_id": 73,
+        "liked": "false",
+        "added_to_cart": "false",
+        "gender": "female",
+        "type": "Tops",
+        "description": "Material: Fabric; Composition: 100% Polyester",
+        "name": "Privé Solid Ruched Tank Top",
+        "price": "12.99",
+        "currency" : "$",
+        "color": "Apricot",
+        "image": "images/top75.jpg"
+    },
+    {
+        "_id": 74,
+        "liked": "false",
+        "added_to_cart": "false",
+        "gender": "female",
+        "type": "Tops",
+        "description": "Material: Fabric; Composition: 100% Polyester",
+        "name": "Privé Keyhole Neckline Sleeveless Blouse",
+        "price": "23.99",
+        "currency" : "$",
+        "color": "White",
+        "image": "images/top76.jpg"
     }
 
 ]

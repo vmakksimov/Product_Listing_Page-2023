@@ -17,6 +17,8 @@
         height: 76%;
     }
 
+    
+
     .logo {
         width: 16%;
     }
@@ -37,6 +39,12 @@
     .cart-button {
         padding: 5px 10px;
         width: 100%;
+        
+    }
+
+    .cart-button:hover{
+        border: 3px solid #624c0478;
+        background-color: white;
     }
 
     .sorting {
@@ -44,7 +52,11 @@
     }
 
     .home-section {
-        padding-top: 16.8%;
+        padding-top: 7.8%;
+    }
+
+    .tops-content {
+        padding-top: 2%
     }
 
     .select-option {
@@ -86,6 +98,10 @@
         font-size: 17px;
     }
 
+    .div2 h3 {
+        display: none;
+    }
+
     .product-info {
         width: 86%;
     }
@@ -102,6 +118,10 @@
 
     p {
         height: auto;
+    }
+
+    .checks {
+        display: flex;
     }
 
 }

@@ -11,8 +11,8 @@ export const Header = ({handleFormChange}) => {
             </div>
             <ul className="header-elements">
                 <li className='header-buttons'><Link to='/'>Home</Link></li>
-                <li className='header-buttons'><Link to='/tops' onClick={(e) => handleFormChange(e.target.innerText)}>Men</Link></li>
-                <li className='header-buttons'><Link to='/tops' onClick={(e) => handleFormChange(e.target.innerText)}>Women</Link></li>
+                <li className='header-buttons'><Link to='/shop' onClick={(e) => handleFormChange(e.target.innerText)}>Men</Link></li>
+                <li className='header-buttons'><Link to='/shop' onClick={(e) => handleFormChange(e.target.innerText)}>Women</Link></li>
             </ul>
         </div>
     )
