@@ -150,3 +150,13 @@ h5 {
 .load-more {
     font-weight: 500;
 }
+
+.logo {
+    margin-right: 5%;
+    margin-left: 5%;
+    width: 9%;
+}
+
+.logo img {
+    width: 86%;
+}

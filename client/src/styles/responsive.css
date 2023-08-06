@@ -20,12 +20,19 @@
     
 
     .logo {
-        width: 16%;
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .logo img {
+        width: 100%;
     }
 
     .img-logo {
         display: none;
     }
+
+
 
     .product-item {
         width: 100%;
@@ -121,5 +128,11 @@
     .checks {
         display: flex;
     }
+
+    .footer-title h4 {
+        display: none;
+    }
+
+  
 
 }
