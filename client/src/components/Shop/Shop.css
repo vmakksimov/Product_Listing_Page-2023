@@ -7,33 +7,33 @@
 }
 
 
-.div1 {
+.filter{
     grid-area: 1 / 1 / 5 / 2;
 }
 
-.div2 {
+.category {
     grid-area: 1 / 2 / 2 / 5;
 }
 
-.div3 {
+.sort {
     grid-area: 1 / 5 / 2 / 6;
 }
 
-.div4 {
+.counter {
     grid-area: 2 / 2 / 3 / 6;
 }
 
-.div5 {
+.product-grid {
     grid-area: 3 / 2 / 5 / 6;
 }
 
-.div6 {
+.load-items {
     grid-area: 5 / 3 / 6 / 5;
 }
 
 
 
-.div5 {
+.product-grid {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -53,4 +53,8 @@
 
 .checks span {
     margin-left: 5px;
+}
+
+.select option{
+    padding: 30px 30px;
 }

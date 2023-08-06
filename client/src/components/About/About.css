@@ -1,0 +1,18 @@
+.padding-large {
+    margin: 150px auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-content p {
+    font-size: 20px;
+    width: 50%;
+    margin: 150px auto;
+}

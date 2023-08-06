@@ -49,22 +49,22 @@ h5 {
     width: 90%;
 }
 
-.div1 {
+.filter {
     padding-top: 17px;
     width: 84%;
     background: #F3F0D1;
 }
 
-.div2 {
+.category {
     padding-top: 15px;
     height: 122px;
 }
 
-.div3 {
+.sort {
     padding-top: 15px;
 }
 
-.div4 {
+.counter {
     font-size: 12px;
 }
 
@@ -136,7 +136,7 @@ h5 {
     border: 3px solid #F3F0D1;
 }
 
-.div6 {
+.load-items {
     margin-left: 73px;
     margin-top: 50px;
     margin-bottom: 50px;

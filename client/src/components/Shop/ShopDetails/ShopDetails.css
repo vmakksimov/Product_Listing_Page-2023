@@ -1,0 +1,26 @@
+/* .product-item {
+    width: 25%;
+} */
+
+.product-image {
+    width: 100%;
+}
+
+.product-image img {
+    width: 86%;
+}
+
+
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  .on {
+    color: #000;
+  }
+  .off {
+    color: #ccc;
+  }
+

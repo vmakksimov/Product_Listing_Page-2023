@@ -9,6 +9,22 @@
     padding: 8px 68px;
     color: white;
     width: 97%;
+    border: 3px solid #F3F0D1;
+}
+.home-shop:hover {
+    border: 0px;
+    background: white;
+    border-radius: 25px;
+    padding: 8px 68px;
+    color: black;
+    width: 97%;
+    border: 3px solid #624c0478;
+
+}
+
+.home-shop a {
+    text-decoration: none;
+    color: black;
 }
 
 

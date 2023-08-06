@@ -1,9 +1,8 @@
 import home_logo from '../../styles/images/fashionmodel.png'
 import './Home.css'
-
 import shoes from '../../shoes.jpg'
-import glasses from '../../glasses.jpg'
 import watch from '../../watch.jpg'
+import { Link } from 'react-router-dom'
 export const Home = () => {
     return (
         <>
@@ -12,7 +11,7 @@ export const Home = () => {
                     <h2>TOPS & BOTTOMS</h2>
                     <h1>NEW <strong>ARRIVALS</strong></h1>
                     <button className='home-shop'>
-                        SHOP
+                        <Link to='/about'>ABOUT US</Link>
                     </button>
                 </div>
                 <div className="img-logo">

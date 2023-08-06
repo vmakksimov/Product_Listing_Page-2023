@@ -1,7 +1,7 @@
 import './Shop.css'
 import { useState, useContext } from 'react'
-import { TopsDetails } from './TopsDetails/TopsDetails'
-import { ProductsContext } from '../../../context/productContext'
+import { ShopDetails } from './ShopDetails/ShopDetails'
+import { ProductsContext } from '../../context/productContext'
 
 export const Shop = () => {
     const itemsPerRow = 16
@@ -13,19 +13,17 @@ export const Shop = () => {
     const type = ['Tops', 'Bottoms']
     const colors = ['Black', 'White', 'Khaki', 'Light Grey', 'Dark Grey', 'Brown', 'Apricot']
 
-    let men;
-    let women;
+    const men = products.filter(x => x.gender == 'male')
+    const women = products.filter(x => x.gender == 'female')
     let types;
     let color;
     let allMatch;
 
     if (name == 'Men') {
-        men = products.filter(x => x.gender == 'male')
         types = men.filter(x => checked.includes(x.type))
         color = men.filter(x => colored.includes(x.color))
         allMatch = men.filter(x => colored.includes(x.color) && checked.includes(x.type))
     } else {
-        women = products.filter(x => x.gender == 'female')
         types = women.filter(x => checked.includes(x.type))
         color = women.filter(x => colored.includes(x.color))
         allMatch = women.filter(x => colored.includes(x.color) && checked.includes(x.type))
@@ -80,9 +78,9 @@ export const Shop = () => {
     }
     return (
         <section class="tops-content">
-            <div class="div1">
+            <div class="filter">
                 <div className="filterList"><h5>Filter by:</h5>
-                    <div className="title"><h5>Gender</h5></div>
+                    <div className="title"><h5>Type</h5></div>
                     <div className="filter-container">
                         {type.map((item, index) => (
                             <div className="checks" key={index}>
@@ -102,16 +100,11 @@ export const Shop = () => {
                     </div>
                 </div>
             </div>
-            <div class="div2">
+            <div class="category">
                 <h1>Tops & Bottoms</h1><h3>Mens & Womens collection 2023</h3>
-                {/* <h1>Bottoms, Leggings & Sweatpants</h1><p>Mens & Womens collection 2023</p> */}
-                </div>
-            <div class="div3"> <div className="sorting">Sort by
+            </div>
+            <div class="sort"> <div className="sorting">Sort by
                 <select className="sorting-options"
-                    data-mdb-size="sm"
-                    data-mdb-option-height="30.5"
-                    data-mdb-container=".select-dropdown-sm"
-                    data-mdb-filter="true"
                     onClick={(e) => sortHandler(e.target.value)}>
                     <option value="default">Default</option>
                     <option value="ascending" >Alphabetically, A-Z</option>
@@ -120,20 +113,19 @@ export const Shop = () => {
                     <option value="low-price">Low Price</option>
                 </select>
             </div></div>
-            <div class="div4">
-                {next > products.filter(x => x.gender == 'male').length ? products.filter(x => x.gender == 'male').length : next} products of {name == 'Men' ? men.length : women.length}
+            <div class="counter">
+                {name == 'Men' ? next > men.length ? men.length : next : next > women.length ? women.length : next} products of {name == 'Men' ? men.length : women.length}
             </div>
-
-            <div class="div5">
-
-                {checked.length === 0 && colored.length > 0 ? color?.slice(0, next)?.map(x => <TopsDetails key={x._id} tops={x} />) : allMatch.length > 0
-                    ? allMatch?.slice(0, next)?.map(x => <TopsDetails key={x._id} tops={x} />) : checked.length === 1
-                        ? types?.slice(0, next)?.map(x => <TopsDetails key={x._id} tops={x} />) : name == 'Men' ? men?.slice(0, next)?.map(x => <TopsDetails key={x._id} tops={x} />)
-                            : women?.slice(0, next)?.map(x => <TopsDetails key={x._id} tops={x} />)
+            <div class="product-grid">
+                {checked.length === 0 && colored.length > 0 ? color?.slice(0, next)?.map(x => <ShopDetails key={x._id} tops={x} />)
+                    : allMatch.length > 0 ? allMatch?.slice(0, next)?.map(x => <ShopDetails key={x._id} tops={x} />)
+                        : checked.length === 1
+                            ? types?.slice(0, next)?.map(x => <ShopDetails key={x._id} tops={x} />) : name == 'Men' ? men?.slice(0, next)?.map(x => <ShopDetails key={x._id} tops={x} />)
+                                : women?.slice(0, next)?.map(x => <ShopDetails key={x._id} tops={x} />)
                 }
             </div>
-            <div class="div6">
-                {next < products.filter(x => x.gender == 'male')?.length && (
+            <div class="load-items">
+                {next < men.length && (
                     <button className='load-more'
 
                         onClick={loadMoreHandler}

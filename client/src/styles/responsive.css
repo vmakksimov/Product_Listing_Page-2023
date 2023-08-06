@@ -3,7 +3,7 @@
         flex-direction: column;
     }
 
-    .div5 {
+    .product-grid {
         flex-direction: column;
     }
 
@@ -90,15 +90,13 @@
         margin: 7px;
     }
 
-    .div3 p {
-        display: none;
-    }
 
-    .div3 h1 {
+ 
+    .sort h1 {
         font-size: 17px;
     }
 
-    .div2 h3 {
+    .category h3 {
         display: none;
     }
 
@@ -106,14 +104,14 @@
         width: 86%;
     }
 
-    .div6 {
+    .load-items {
         display: flex;
         justify-content: center;
         margin-left: 0px;
     }
 
     .load-more{
-        padding: 12px 103px;
+        padding: 12px 80px;
     }
 
     p {
