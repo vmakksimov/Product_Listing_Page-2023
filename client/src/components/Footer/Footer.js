@@ -1,16 +1,17 @@
 import './Footer.css'
+import { Link } from 'react-router-dom'
 
 export const Footer = () => {
     return (
-        <section className="daycare-footer">
-        <article>
-            <p>ReactJS Project by Victor Maksimov 2023</p>
-        </article>
-        <ul>
-            <li>PRIVACY</li>
-            <li>Terms & Conditions</li>
-            <li>HELP</li>
-        </ul>
-    </section>
+        <section className="footer-shop">
+            <article className='footer-title'>
+                <h4>Project Listing Page by Viktor Maksimov 2023</h4>
+            </article>
+            <ul className='footer-links'>
+                <li><Link to=''>CONTACT US</Link></li>
+                <li><Link to=''>Terms & Conditions</Link></li>
+                <li><Link to=''>HELP CENTER</Link></li>
+            </ul>
+        </section>
     )
 }

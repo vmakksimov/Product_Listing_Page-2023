@@ -1,10 +1,24 @@
-.daycare-footer {
+.footer-shop {
     background-color: #F3F0D1;
     display: flex;
     justify-content: space-around;
 }
 
-.daycare-footer ul {
+.footer-links {
     display: flex;
     list-style-type: none;
+}
+
+.footer-links li {
+    margin: 10px;
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Raleway', sans-serif;
+}
+
+.footer-title h4 {
+    margin: 10px;
 }

@@ -1,14 +1,16 @@
 import home_logo from '../../styles/images/fashionmodel.png'
-import women_model_logo from '../../styles/images/womenmodel.png'
-import men_model from '../../styles/images/menmodel.png'
 import './Home.css'
+
+import shoes from '../../shoes.jpg'
+import glasses from '../../glasses.jpg'
+import watch from '../../watch.jpg'
 export const Home = () => {
     return (
         <>
             <section className="home-logo">
                 <div className="header-content">
-                    <h1>TOPS & BOTTOMS</h1>
-                    <h2>NEW <strong>ARRIVALS</strong></h2>
+                    <h2>TOPS & BOTTOMS</h2>
+                    <h1>NEW <strong>ARRIVALS</strong></h1>
                     <button className='home-shop'>
                         SHOP
                     </button>
@@ -18,23 +20,23 @@ export const Home = () => {
                 </div>
 
             </section>
+            <section className='coming-soon'>
+                <h1>COMING SOON</h1>
+            </section>
             <section className="home-types">
                 <div className="type-men">
-                    <div className='type-content'>
-                        <h1>Shoes</h1>
-                        <p>Summer 2023</p>
-                    </div>
                     <div className='type-image-men'>
-                        <img src={men_model} alt="" />
+                        <h5>SUMMER 2023</h5>
+                        <h1>Shoes</h1>
+                        <img src={shoes} alt="" />
                     </div>
                 </div>
-                <div className="type-women">
-                <div className='type-content'>
-                        <h1>Accssesoaries</h1>
-                        <p>Summer 2023</p>
-                    </div>
+                <div className="type-accsess">
                     <div className='type-image-women'>
-                        <img src={women_model_logo} alt="" />
+                        <h5>SUMMER 2023</h5>
+                        <h1>Watches</h1>
+                       
+                        <img src={watch} alt="" />
                     </div>
                 </div>
             </section>

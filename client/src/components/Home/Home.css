@@ -22,32 +22,48 @@
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
+    margin: 150px auto;
 }
 
-.type-men,
-.type-women {
+/* .type-men,
+.type-accsess {
     display: flex;
     border: 1px solid gainsboro;
-    width: 24%
+    
+} */
+
+.type-men, .type-accsess {
+    width: 32%
 }
 
-.type-image {
-    width: 39%;
+
+.type-image-women {
+    width: 77%;
+}
+
+.type-image-men {
+    width: 76%;
 }
 
 .type-image-men img {
-    width: 81.5%;
+    width: 100%;
 }
 
 .type-image-women img {
     width: 100%;
 }
 
-.type-men:hover,
-.type-women:hover {
+/* .type-men:hover,
+.type-accsess:hover {
     background-color: #717fdf;
     cursor: pointer;
     color: white;
+} */
+
+.coming-soon {
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    margin: 40px;
 }
 
 

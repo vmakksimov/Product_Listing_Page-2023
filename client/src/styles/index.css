@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Grechen+Fuemen&family=Inter:wght@200;300;500&family=Lato:wght@300&family=Montserrat+Subrayada&family=Montserrat:wght@300;400&family=Moon+Dance&family=Open+Sans:wght@300;400;800&family=PT+Sans&family=Pacifico&family=Poppins:wght@100;800&family=Raleway:ital,wght@0,100;0,400;0,500;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Grechen+Fuemen&family=Inter:wght@200;300;500&family=Lato:wght@300&family=Montserrat+Subrayada&family=Montserrat:wght@300;400&family=Moon+Dance&family=Open+Sans:wght@300;400;800&family=PT+Sans&family=Pacifico&family=Poppins:wght@800&family=Raleway+Dots&family=Raleway:ital,wght@0,100;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
 html {
@@ -19,7 +19,7 @@ html {
 }
 
 .home-section {
-    padding-top: 5.7%;
+    padding-top: 5.3%;
 }
 
 .product-info {
@@ -75,7 +75,14 @@ h5 {
 
 .header-buttons {
     /* margin: 15px; */
+    margin: 5px;
+    border: 0px;
+    height: 54%;
     font-size: 1.5rem;
+    border-radius: 25px;
+    border: 3px solid #F3F0D1;
+    /* background: #624c0478; */
+    color: white;
 }
 
 .header-buttons:hover {
@@ -84,25 +91,25 @@ h5 {
     height: 54%;
     font-size: 1.5rem;
     border-radius: 25px;
-    box-shadow: 0px 3px 8px 1px #1f1f1e;
-    background: #bebbb947;
+    border: 3px solid #624c0478;
+    /* background: #624c0478; */
     color: white;
 }
 
 .cart-button {
-    padding: 10px 28px;
+    padding: 6px 28px;
     margin-bottom: 50px;
     border-radius: 25px;
-    width: 90%;
+    width: 98%;
     border: 3px solid white;
     background-color: #624c0478;
 }
 
 .cart-button:hover {
-    padding: 10px 28px;
+    padding: 6px 28px;
     margin-bottom: 50px;
     border-radius: 25px;
-    width: 90%;
+    width: 98%;
     border: 3px groove #624c0478;
     background-color: white;
     color: black;

@@ -14,7 +14,7 @@ export const TopsDetails = ({ tops }) => {
                 </div>
                 <div className="product-info">
 
-                    <p style={{ fontWeight: '700' }}>{tops.name}</p>
+                    <p style={{ fontWeight: '700', fontSize: '15px' }}>{tops.name}</p>
                     <p style={{ fontSize: '12px' }}>{tops.description}</p>
                     <p style={{ fontWeight: '300' }}>Price: {tops.price}{tops.currency}</p>
 
