@@ -17,7 +17,6 @@ export const Home = () => {
                 <div className="img-logo">
                     <img src={home_logo} alt="" />
                 </div>
-
             </section>
             <section className='coming-soon'>
                 <h1>COMING SOON</h1>

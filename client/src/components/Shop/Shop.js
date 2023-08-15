@@ -1,4 +1,5 @@
 import './Shop.css'
+import Popup from 'reactjs-popup';
 import { useState, useContext } from 'react'
 import { ShopDetails } from './ShopDetails/ShopDetails'
 import { ProductsContext } from '../../context/productContext'
@@ -10,6 +11,7 @@ export const Shop = () => {
     const [sorted, setSort] = useState([]);
     const [checked, setChecked] = useState([]);
     const [colored, setColor] = useState([]);
+    const [show, setShow] = useState(false);
     const type = ['Tops', 'Bottoms']
     const colors = ['Black', 'White', 'Khaki', 'Light Grey', 'Dark Grey', 'Brown', 'Apricot']
 
@@ -76,9 +78,18 @@ export const Shop = () => {
             setNext(next + itemsPerRow);
         }
     }
+
+    const changeFilter = () => {
+
+        if (show == false) {
+            setShow(true)
+        } else {
+            setShow(false)
+        }
+    }
     return (
-        <section class="tops-content">
-            <div class="filter">
+        <section className="tops-content">
+            {/* <Popup trigger={<button className='filter-button'> <i class="fa-solid fa-filter"></i></button>} position="right center">
                 <div className="filterList"><h5>Filter by:</h5>
                     <div className="title"><h5>Type</h5></div>
                     <div className="filter-container">
@@ -99,11 +110,62 @@ export const Shop = () => {
                         ))}
                     </div>
                 </div>
-            </div>
-            <div class="category">
+            </Popup> */}
+            <button className='filter-button' onClick={changeFilter}><i className="fa-solid fa-filter"></i></button>
+            {!show ?
+                <div className="filter">
+                    <div className="filterList"><h5>Filter by:</h5>
+                        <div className="title"><h5>Type</h5></div>
+                        <div className="filter-container">
+                            {type.map((item, index) => (
+                                <div className="checks" key={index}>
+                                    <input value={item} type="checkbox" onChange={typeHandler} />
+                                    <span>{item}</span>
+                                </div>
+                            ))}
+                        </div>
+                        <div className="title"><h5>Color</h5></div>
+                        <div className="filter-container">
+                            {colors.map((item, index) => (
+                                <div className="checks" key={index}>
+                                    <input value={item} type="checkbox" onChange={colorHandler} />
+                                    <span>{item}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+                :
+                <div className='media-filter'>
+                    <div className="filterList"><h5>Filter by:</h5>
+                        <div className="title"><h5>Type</h5></div>
+                        <div className="filter-container">
+                            {type.map((item, index) => (
+                                <div className="checks" key={index}>
+                                    <input value={item} type="checkbox" onChange={typeHandler} />
+                                    <span>{item}</span>
+                                </div>
+                            ))}
+                        </div>
+                        <div className="title"><h5>Color</h5></div>
+                        <div className="filter-container">
+                            {colors.map((item, index) => (
+                                <div className="checks" key={index}>
+                                    <input value={item} type="checkbox" onChange={colorHandler} />
+                                    <span>{item}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            }
+
+    
+            <div className="category">
                 <h1>Tops & Bottoms</h1><h3>Mens & Womens collection 2023</h3>
+
             </div>
-            <div class="sort"> <div className="sorting">Sort by
+            <div className="sort"> <div className="sorting">Sort by
                 <select className="sorting-options"
                     onClick={(e) => sortHandler(e.target.value)}>
                     <option value="default">Default</option>
@@ -113,10 +175,10 @@ export const Shop = () => {
                     <option value="low-price">Low Price</option>
                 </select>
             </div></div>
-            <div class="counter">
+            <div className="counter">
                 {gender == 'Men' ? next > men.length ? men.length : next : next > women.length ? women.length : next} products of {gender == 'Men' ? men.length : women.length}
             </div>
-            <div class="product-grid">
+            <div className="product-grid">
                 {checked.length === 0 && colored.length > 0 ? color?.slice(0, next)?.map(x => <ShopDetails key={x._id} tops={x} />)
                     : allMatch.length > 0 ? allMatch?.slice(0, next)?.map(x => <ShopDetails key={x._id} tops={x} />)
                         : checked.length === 1
@@ -124,7 +186,7 @@ export const Shop = () => {
                                 : women?.slice(0, next)?.map(x => <ShopDetails key={x._id} tops={x} />)
                 }
             </div>
-            <div class="load-items">
+            <div className="load-items">
                 {next < men.length && (
                     <button className='load-more'
 

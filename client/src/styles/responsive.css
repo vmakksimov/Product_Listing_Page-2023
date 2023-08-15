@@ -8,16 +8,14 @@
     }
 
 
-    .header-buttons a{
+    .header-buttons a {
         font-size: 17px;
     }
 
-    .header-buttons:hover{
+    .header-buttons:hover {
         text-align: center;
         height: 76%;
     }
-
-    
 
     .logo {
         width: 100%;
@@ -46,10 +44,10 @@
     .cart-button {
         padding: 5px 10px;
         width: 100%;
-        
+
     }
 
-    .cart-button:hover{
+    .cart-button:hover {
         border: 3px solid #624c0478;
         background-color: white;
     }
@@ -77,28 +75,31 @@
     .select-dropdown-sm .select-option {
         font-size: 0.8rem;
     }
+
     .select-dropdown-sm .input-group {
-      padding: 8px;
-    }
-    .select-dropdown-sm .select-filter-input {
-      font-size: 0.8rem;
-      height: calc(1.664rem + 2px);
-      min-height: calc(1.664rem + 2px);
-      padding-top: 0.216rem;
-      padding-bottom: 0.216rem;
-    }
-    .select-dropdown-sm .select-no-results {
-      font-size: 0.8rem;
+        padding: 8px;
     }
 
-  
+    .select-dropdown-sm .select-filter-input {
+        font-size: 0.8rem;
+        height: calc(1.664rem + 2px);
+        min-height: calc(1.664rem + 2px);
+        padding-top: 0.216rem;
+        padding-bottom: 0.216rem;
+    }
+
+    .select-dropdown-sm .select-no-results {
+        font-size: 0.8rem;
+    }
+
+
 
     .filterList {
         margin: 7px;
     }
 
 
- 
+
     .sort h1 {
         font-size: 17px;
     }
@@ -117,7 +118,7 @@
         margin-left: 0px;
     }
 
-    .load-more{
+    .load-more {
         padding: 12px 80px;
     }
 
@@ -133,6 +134,10 @@
         display: none;
     }
 
-  
+    .filter {
+        display: none;
+    }
+
+
 
 }

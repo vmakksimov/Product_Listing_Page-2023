@@ -7,7 +7,7 @@
 }
 
 
-.filter{
+.filter {
     grid-area: 1 / 1 / 5 / 2;
 }
 
@@ -55,6 +55,46 @@
     margin-left: 5px;
 }
 
-.select option{
+.select option {
     padding: 30px 30px;
+}
+
+/* @media all and (min-width: 600px) {
+    .filter-button {
+        display: none;
+    }
+
+}  */
+
+.filter-button {
+    height: 30%;
+    width: 12%;
+}
+
+
+.popup-content {
+    margin-top: 20%;
+    background: rgb(255, 255, 255);
+    width: 100%;
+
+}
+
+.popup-arrow {
+    display: none;
+}
+
+[role='tooltip'].popup-content {
+    width: 172px;
+    top: 33.3px;
+    left: 66.9px;
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
+}
+
+.popup-overlay {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+[data-popup='tooltip'].popup-overlay {
+    background: transparent;
 }
