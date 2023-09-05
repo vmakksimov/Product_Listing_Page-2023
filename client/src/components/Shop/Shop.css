@@ -59,17 +59,19 @@
     padding: 30px 30px;
 }
 
-/* @media all and (min-width: 600px) {
-    .filter-button {
+@media all and (min-width: 600px) {
+    #nav-container {
         display: none;
     }
 
-}  */
+} 
 
 .filter-button {
     height: 30%;
     width: 12%;
 }
+
+
 
 
 .popup-content {

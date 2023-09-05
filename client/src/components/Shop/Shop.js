@@ -111,56 +111,30 @@ export const Shop = () => {
                     </div>
                 </div>
             </Popup> */}
-            <button className='filter-button' onClick={changeFilter}><i className="fa-solid fa-filter"></i></button>
-            {!show ?
-                <div className="filter">
-                    <div className="filterList"><h5>Filter by:</h5>
-                        <div className="title"><h5>Type</h5></div>
-                        <div className="filter-container">
-                            {type.map((item, index) => (
-                                <div className="checks" key={index}>
-                                    <input value={item} type="checkbox" onChange={typeHandler} />
-                                    <span>{item}</span>
-                                </div>
-                            ))}
-                        </div>
-                        <div className="title"><h5>Color</h5></div>
-                        <div className="filter-container">
-                            {colors.map((item, index) => (
-                                <div className="checks" key={index}>
-                                    <input value={item} type="checkbox" onChange={colorHandler} />
-                                    <span>{item}</span>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-                :
-                <div className='media-filter'>
-                    <div className="filterList"><h5>Filter by:</h5>
-                        <div className="title"><h5>Type</h5></div>
-                        <div className="filter-container">
-                            {type.map((item, index) => (
-                                <div className="checks" key={index}>
-                                    <input value={item} type="checkbox" onChange={typeHandler} />
-                                    <span>{item}</span>
-                                </div>
-                            ))}
-                        </div>
-                        <div className="title"><h5>Color</h5></div>
-                        <div className="filter-container">
-                            {colors.map((item, index) => (
-                                <div className="checks" key={index}>
-                                    <input value={item} type="checkbox" onChange={colorHandler} />
-                                    <span>{item}</span>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            }
+            {/* <button className='filter-button' onClick={changeFilter}><i className="fa-solid fa-filter"></i></button> */}
 
-    
+            <div className="filter">
+                <div className="filterList"><h5>Filter by:</h5>
+                    <div className="title"><h5>Type</h5></div>
+                    <div className="filter-container">
+                        {type.map((item, index) => (
+                            <div className="checks" key={index}>
+                                <input value={item} type="checkbox" onChange={typeHandler} />
+                                <span>{item}</span>
+                            </div>
+                        ))}
+                    </div>
+                    <div className="title"><h5>Color</h5></div>
+                    <div className="filter-container">
+                        {colors.map((item, index) => (
+                            <div className="checks" key={index}>
+                                <input value={item} type="checkbox" onChange={colorHandler} />
+                                <span>{item}</span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
             <div className="category">
                 <h1>Tops & Bottoms</h1><h3>Mens & Womens collection 2023</h3>
 
@@ -196,6 +170,6 @@ export const Shop = () => {
                     </button>
                 )}
             </div>
-        </section>
+        </section >
     )
 }

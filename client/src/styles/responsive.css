@@ -57,7 +57,7 @@
     }
 
     .home-section {
-        padding-top: 7.8%;
+        padding-top: 0%;
     }
 
     .tops-content {
@@ -138,6 +138,9 @@
         display: none;
     }
 
-
+    #nav-container {
+        display: block;
+        right: 4%;
+    }
 
 }
