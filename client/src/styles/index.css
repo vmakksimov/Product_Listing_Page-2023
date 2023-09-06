@@ -115,6 +115,27 @@ h5 {
     color: black;
 }
 
+.cart-button-remove {
+    padding: 6px 28px;
+    margin-bottom: 50px;
+    border-radius: 25px;
+    width: 98%;
+    border: 3px groove #624c0478;
+    background-color: white;
+    color: black;
+}
+
+/* .cart-button:hover {
+    padding: 6px 28px;
+    margin-bottom: 50px;
+    border-radius: 25px;
+    width: 98%;
+    border: 3px groove #624c0478;
+    background-color: white;
+    color: black;
+} */
+
+
 .product-item::before {
     content: none;
 }

@@ -5,6 +5,9 @@ import { useState } from 'react';
 export const ShopDetails = ({ tops, setItemCount, itemCount }) => {
     const [rating, setRating] = useState(0);
     const [hover, setHover] = useState(0);
+    const [clicked, setClick] = useState(false);
+
+    
 
     const alertHandler = () => {
         window.alert('The product was succesfully added to the cart!')
@@ -37,9 +40,20 @@ export const ShopDetails = ({ tops, setItemCount, itemCount }) => {
                     </div>
                     <p style={{ fontSize: '20px', fontWeight: 'bold' }}>Price: {tops.price}{tops.currency}</p>
                     <div className='add-button'>
-                        <button className='cart-button' onClick={() => {
+                        {tops.added_to_cart 
+                        ? <button className='cart-button' onClick={() => {
+                            tops.added_to_cart = false
                             setItemCount(itemCount + 1);
                         }}>ADD TO CART</button>
+                        :
+                        <button className='cart-button-remove'
+                        onClick={() => {
+                            tops.added_to_cart = true
+                            setItemCount(Math.max(itemCount - 1, 0));
+                        }}>
+                            REMOVE FROM CART</button>
+                    }
+                        
                     </div>
                 </div>
             </article>
