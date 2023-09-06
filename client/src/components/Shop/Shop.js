@@ -3,10 +3,17 @@ import Popup from 'reactjs-popup';
 import { useState, useContext } from 'react'
 import { ShopDetails } from './ShopDetails/ShopDetails'
 import { ProductsContext } from '../../context/productContext'
+import ButtonGroup from "@material-ui/core/ButtonGroup";
+import Badge from "@material-ui/core/Badge";
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import Button from "@material-ui/core/Button";
+import AddIcon from "@material-ui/icons/Add";
+import RemoveIcon from "@material-ui/icons/Remove";
 
 export const Shop = () => {
+
     const itemsPerRow = 16
-    const { products, gender } = useContext(ProductsContext);
+    const { products, gender, setItemCount, itemCount } = useContext(ProductsContext);
     const [next, setNext] = useState(itemsPerRow);
     const [sorted, setSort] = useState([]);
     const [checked, setChecked] = useState([]);
@@ -137,7 +144,24 @@ export const Shop = () => {
             </div>
             <div className="category">
                 <h1>Tops & Bottoms</h1><h3>Mens & Womens collection 2023</h3>
-
+                <ButtonGroup>
+                    <Button
+                        onClick={() => {
+                            setItemCount(Math.max(itemCount - 1, 0));
+                        }}
+                    >
+                        {" "}
+                        <RemoveIcon fontSize="small" />
+                    </Button>
+                    <Button
+                        onClick={() => {
+                            setItemCount(itemCount + 1);
+                        }}
+                    >
+                        {" "}
+                        <AddIcon fontSize="small" />
+                    </Button>
+                </ButtonGroup>
             </div>
             <div className="sort"> <div className="sorting">Sort by
                 <select className="sorting-options"
@@ -153,11 +177,11 @@ export const Shop = () => {
                 {gender == 'Men' ? next > men.length ? men.length : next : next > women.length ? women.length : next} products of {gender == 'Men' ? men.length : women.length}
             </div>
             <div className="product-grid">
-                {checked.length === 0 && colored.length > 0 ? color?.slice(0, next)?.map(x => <ShopDetails key={x._id} tops={x} />)
-                    : allMatch.length > 0 ? allMatch?.slice(0, next)?.map(x => <ShopDetails key={x._id} tops={x} />)
+                {checked.length === 0 && colored.length > 0 ? color?.slice(0, next)?.map(x => <ShopDetails key={x._id} tops={x} itemCount={itemCount} setItemCount={setItemCount} />)
+                    : allMatch.length > 0 ? allMatch?.slice(0, next)?.map(x => <ShopDetails key={x._id} tops={x}itemCount={itemCount} setItemCount={setItemCount}/>)
                         : checked.length === 1
-                            ? types?.slice(0, next)?.map(x => <ShopDetails key={x._id} tops={x} />) : gender == 'Men' ? men?.slice(0, next)?.map(x => <ShopDetails key={x._id} tops={x} />)
-                                : women?.slice(0, next)?.map(x => <ShopDetails key={x._id} tops={x} />)
+                            ? types?.slice(0, next)?.map(x => <ShopDetails key={x._id} tops={x}itemCount={itemCount} setItemCount={setItemCount}/>) : gender == 'Men' ? men?.slice(0, next)?.map(x => <ShopDetails key={x._id} tops={x} itemCount={itemCount} setItemCount={setItemCount}/>)
+                                : women?.slice(0, next)?.map(x => <ShopDetails key={x._id} tops={x} itemCount={itemCount} setItemCount={setItemCount}/>)
                 }
             </div>
             <div className="load-items">

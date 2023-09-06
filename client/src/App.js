@@ -16,6 +16,7 @@ import { About } from './components/About/About';
 function App() {
 
     const [gender, setName] = useState(localStorage.getItem("gender") || undefined)
+    const [itemCount, setItemCount] = useState(1);
 
     const handleFormChange = (event) => {
         setName(event)
@@ -26,9 +27,9 @@ function App() {
     return (
         <div className="App">
             <section className="App-header">
-                <Header handleFormChange={handleFormChange} />
+                <Header handleFormChange={handleFormChange} itemCount={itemCount}/>
             </section>
-            <ProductsContext.Provider value={{ products, gender }}>
+            <ProductsContext.Provider value={{ products, gender, itemCount, setItemCount }}>
                 <section className="home-section">
                     <Routes>
                         <Route path='/' element={<Home />} />

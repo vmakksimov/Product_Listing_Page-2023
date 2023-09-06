@@ -8,8 +8,8 @@ import Button from "@material-ui/core/Button";
 import AddIcon from "@material-ui/icons/Add";
 import RemoveIcon from "@material-ui/icons/Remove";
 import { useState } from "react";
-export const Header = ({ handleFormChange }) => {
-    const [itemCount, setItemCount] = useState(1);
+export const Header = ({ handleFormChange, itemCount }) => {
+   
 
     return (
         <>
@@ -27,7 +27,7 @@ export const Header = ({ handleFormChange }) => {
                         <li className='header-buttons'><Link to='/shop' onClick={(e) => handleFormChange(e.target.innerText)}>Men</Link></li>
                         <li className='header-buttons'><Link to='/shop' onClick={(e) => handleFormChange(e.target.innerText)}>Women</Link></li>
                     </ul>
-                    
+
                 </div>
             </div>
 
@@ -41,33 +41,14 @@ export const Header = ({ handleFormChange }) => {
                     <li className='header-buttons'><Link to='/shop' onClick={(e) => handleFormChange(e.target.innerText)}>Men</Link></li>
                     <li className='header-buttons'><Link to='/shop' onClick={(e) => handleFormChange(e.target.innerText)}>Women</Link></li>
                 </ul>
+                <div>
+                    <Badge color="secondary" badgeContent={itemCount}>
+                        <ShoppingCartIcon />{" "}
+                    </Badge>
+                    
+                </div>
             </div>
-            <div style={{ display: "block", padding: 30 }}>
-                        <h4>How to create ShoppingCart Button in ReactJS?</h4>
-                        <div>
-                            <Badge color="secondary" badgeContent={itemCount}>
-                                <ShoppingCartIcon />{" "}
-                            </Badge>
-                            <ButtonGroup>
-                                <Button
-                                    onClick={() => {
-                                        setItemCount(Math.max(itemCount - 1, 0));
-                                    }}
-                                >
-                                    {" "}
-                                    <RemoveIcon fontSize="small" />
-                                </Button>
-                                <Button
-                                    onClick={() => {
-                                        setItemCount(itemCount + 1);
-                                    }}
-                                >
-                                    {" "}
-                                    <AddIcon fontSize="small" />
-                                </Button>
-                            </ButtonGroup>
-                        </div>
-                    </div>
+
         </>
     )
 }

@@ -2,7 +2,7 @@ import './ShopDetails.css'
 import { useState } from 'react';
 
 
-export const ShopDetails = ({ tops }) => {
+export const ShopDetails = ({ tops, setItemCount, itemCount }) => {
     const [rating, setRating] = useState(0);
     const [hover, setHover] = useState(0);
 
@@ -37,7 +37,9 @@ export const ShopDetails = ({ tops }) => {
                     </div>
                     <p style={{ fontSize: '20px', fontWeight: 'bold' }}>Price: {tops.price}{tops.currency}</p>
                     <div className='add-button'>
-                        <button className='cart-button' onClick={alertHandler}>ADD TO CART</button>
+                        <button className='cart-button' onClick={() => {
+                            setItemCount(itemCount + 1);
+                        }}>ADD TO CART</button>
                     </div>
                 </div>
             </article>
